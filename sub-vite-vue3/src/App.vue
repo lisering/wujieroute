@@ -12,7 +12,10 @@ const router = useRouter();
 watch(
   () => route,
   (val) => {
-    window.$wujie?.bus.$emit("sub-route-change", "mdm", route.path);
+    // window.$wujie?.bus.$emit("sub-route-change", "mdm", route.path);
+    if (route.params.path) {
+      window.$wujie?.bus.$emit("mdm-router-change", `/${route.params.path}`);
+    }
   }
 );
 
