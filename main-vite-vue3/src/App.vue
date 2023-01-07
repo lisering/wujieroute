@@ -1,4 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import WujieVue from "wujie-vue3";
+const { setupApp } = WujieVue;
+setupApp({
+  name: "mdm",
+  url: "//localhost:1001/",
+  exec: true,
+  alive: true,
+});
+</script>
 
 <template>
   <RouterView />
