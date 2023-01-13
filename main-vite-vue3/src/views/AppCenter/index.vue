@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link to="/mdm">子应用 sub-vite-vue3</router-link>
+    <router-link to="/mdm">子应用 sub-vite-vue3 首页</router-link>
   </div>
   <div>
     <router-link to="/mdm-sub/home">子应用 sub-vite-vue3 home page</router-link>

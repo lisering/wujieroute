@@ -1,12 +1,6 @@
 <template>
   <!--单例模式，name相同则复用一个无界实例，改变url则子应用重新渲染实例到对应路由 -->
-  <WujieVue
-    width="100%"
-    height="100%"
-    name="mdm"
-    :url="url"
-    :sync="true"
-  ></WujieVue>
+  <WujieVue width="100%" height="100%" name="mdm" :url="url"></WujieVue>
 </template>
 
 <script lang="ts" setup>
@@ -21,7 +15,13 @@ const url = ref("//localhost:1001/" + `${route.params.path}`);
 watch(
   () => route.params.path,
   (val) => {
-    wujieVue.bus.$emit("mdm-router-change", `/${route.params.path}`);
+    if (val) {
+      console.log("WujieVue val", val);
+      wujieVue.bus.$emit("mdm-router-change", `/${val}`);
+    }
+  },
+  {
+    immediate: true,
   }
 );
 </script>

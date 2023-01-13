@@ -5,7 +5,7 @@
       <el-container>
         <el-aside width="300px">
           <div>
-            <router-link to="/mdm">子应用 sub-vite-vue3</router-link>
+            <router-link to="/home">回到基座</router-link>
           </div>
           <div>
             <router-link to="/mdm-sub/home"

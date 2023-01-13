@@ -7,11 +7,11 @@ import BaseLayout from "@/views/Layout/BaseLayout.vue";
 const routes = [
   {
     path: "/",
-    redirect: "/index",
+    redirect: "/home",
   },
   {
-    path: "/index",
-    name: "index",
+    path: "/home",
+    name: "home",
     component: Home,
   },
   {
